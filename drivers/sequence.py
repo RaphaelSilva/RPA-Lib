@@ -12,5 +12,4 @@ class Sequence():
         self._job_list = seq
 
     def execute(self):
-        for job in self._job_list:
-            job.run_logic(self._context)
+        Job.run(self._job_list, self._context)
