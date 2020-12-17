@@ -1,7 +1,8 @@
+# flake8: noqa
 from .button_click_job import ButtonClickJob
-from .job import Job
+from .job import *
 from .navigate_job import NavigateJob
-from .select_job import SelectElementJob
+from .select_job import *
 from .type_input_job import TypeInputMaskJob
 
 from pathlib import Path

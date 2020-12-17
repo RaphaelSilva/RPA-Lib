@@ -1,7 +1,10 @@
-# from selenium.webdriver.remote.webelement import WebElement
+from typing import Callable
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import NoSuchElementException
 from rpa.jobs.job import Job
-from rpa.drivers.context import Context
+from rpa.drivers import Context
+
+Click: Callable[[WebElement], None] = lambda el: el.click()
 
 
 class ButtonClickJob(Job):
@@ -10,12 +13,13 @@ class ButtonClickJob(Job):
     _method: str
 
     def __init__(self, path: str, method='find_element_by_xpath'):
+        super().__init__()
         self._path = path
         self._method = method
 
     def run_logic(self, context: Context):
         try:
             context.element = getattr(context.driver, self._method)(self._path)
-            context.element.click()
+            Click(context.element)
         except NoSuchElementException:
             print(NoSuchElementException)

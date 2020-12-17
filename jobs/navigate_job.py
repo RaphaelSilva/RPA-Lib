@@ -1,7 +1,7 @@
 
 import time
-from rpa.jobs.job import Job
-from rpa.drivers.context import Context
+from rpa.jobs import Job
+from rpa.drivers import Context
 
 
 class NavigateJob(Job):
@@ -10,6 +10,7 @@ class NavigateJob(Job):
     _time: int
 
     def __init__(self, url: str, time=2):
+        super().__init__()
         self._url = url
         self._time = time
 

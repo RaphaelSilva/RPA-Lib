@@ -7,9 +7,13 @@ class Sequence():
     _job_list: list[Job]
     _context: Context
 
-    def __init__(self, driver: WebDriver, seq: list[Job]):
-        self._context = Context(driver)
+    def __init__(self, seq: list[Job]):
         self._job_list = seq
 
-    def execute(self):
+    def execute(self, driver: WebDriver):
+        self._context = Context(driver)
         Job.run(self._job_list, self._context)
+
+    @property
+    def context(self):
+        return self._context
