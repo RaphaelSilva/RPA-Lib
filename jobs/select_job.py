@@ -80,6 +80,14 @@ class LookupStock(SubJob):
         self._value = value
         self._func = func
 
+    def adapter(self, el: WebElement) -> Stock:
+        print(el)
+
+
+
+        
+        return Stock()
+
     def exec(self, context: Context):        
         for el in context.element:
-            Stock.facotry(el)
+            stock = self.adapter(el)

@@ -1,4 +1,3 @@
-from selenium.webdriver.remote.webelement import WebElement
 
 class Stock():
     _name: str
@@ -33,11 +32,6 @@ class Stock():
     self._lote = lote
     self._last_trade_date = last_trade_date
     self._last_trade_hour = last_trade_hour
-
-    @staticmethod
-    def factory(WebElement el):
-        print(el)
-
 
     @property
     def name(self) -> str:
