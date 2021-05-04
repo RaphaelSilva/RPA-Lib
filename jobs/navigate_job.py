@@ -1,7 +1,7 @@
 
 import time
-from rpa.jobs import Job
-from rpa.drivers import Context
+from jobs import Job
+from drivers import Context
 
 
 class NavigateJob(Job):

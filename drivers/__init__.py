@@ -1,3 +1,4 @@
+# flake8: noqa
 from .context import Context
 from .sequence import Sequence
 

@@ -1,10 +1,10 @@
 from typing import Callable
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import NoSuchElementException
-from rpa.jobs import Job, SubJob
-from rpa.drivers import Context
-from rpa.jobs.button_click_job import Click
-from rpa.entitys import Stock
+from jobs import Job, SubJob
+from drivers import Context
+from jobs.button_click_job import Click
+from entitys import Stock
 
 
 class SelectElementJob(Job):
@@ -83,11 +83,9 @@ class LookupStock(SubJob):
     def adapter(self, el: WebElement) -> Stock:
         print(el)
 
-
-
-        
         return Stock()
 
-    def exec(self, context: Context):        
+    def exec(self, context: Context):
         for el in context.element:
-            stock = self.adapter(el)
+            # stock = 
+            self.adapter(el)

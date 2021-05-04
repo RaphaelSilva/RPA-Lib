@@ -1,4 +1,4 @@
-from rpa.drivers import Sequence
+from drivers import Sequence
 
 
 class Task():

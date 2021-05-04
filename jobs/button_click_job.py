@@ -1,8 +1,8 @@
 from typing import Callable
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import NoSuchElementException
-from rpa.jobs.job import Job
-from rpa.drivers import Context
+from jobs import Job
+from drivers import Context
 
 Click: Callable[[WebElement], None] = lambda el: el.click()
 

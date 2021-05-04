@@ -22,16 +22,16 @@ class Stock():
                  lote: int,
                  last_trade_date: str,
                  last_trade_hour: str):
-    self._name = name
-    self._short_name = short_name
-    self._info = info
-    self._theoric_price = theoric_price
-    self._variation = variation
-    self._min = min
-    self._max = max
-    self._lote = lote
-    self._last_trade_date = last_trade_date
-    self._last_trade_hour = last_trade_hour
+        self._name = name
+        self._short_name = short_name
+        self._info = info
+        self._theoric_price = theoric_price
+        self._variation = variation
+        self._min = min
+        self._max = max
+        self._lote = lote
+        self._last_trade_date = last_trade_date
+        self._last_trade_hour = last_trade_hour
 
     @property
     def name(self) -> str:

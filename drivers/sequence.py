@@ -1,6 +1,6 @@
 from selenium.webdriver.remote.webdriver import WebDriver
-from rpa.jobs.job import Job
-from rpa.drivers.context import Context
+from jobs import Job
+from drivers import Context
 
 
 class Sequence():

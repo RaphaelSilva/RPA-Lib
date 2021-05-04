@@ -2,8 +2,8 @@ from typing import Callable
 from selenium.webdriver.remote.webelement import WebElement
 # from selenium.webdriver.remote.webdriver import WebDriver
 # from selenium.common.exceptions import NoSuchElementException
-from rpa.jobs import Job
-from rpa.drivers import Context
+from jobs import Job
+from drivers import Context
 
 Typing: Callable[[WebElement, str], None] = lambda el, text: [
     el.send_keys(key) for key in text]

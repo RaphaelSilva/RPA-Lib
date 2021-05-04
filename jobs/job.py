@@ -2,13 +2,8 @@ from uuid import UUID, uuid4
 # from selenium.webdriver.remote.webelement import WebElement
 # from selenium.webdriver.remote.webdriver import WebDriver
 # from selenium.common.exceptions import NoSuchElementException
-from rpa.drivers import Context
-
-
-class SubJob():
-
-    def exec(self, context: Context):
-        raise NotImplementedError
+from drivers import Context
+from jobs import SubJob
 
 
 class Job():
